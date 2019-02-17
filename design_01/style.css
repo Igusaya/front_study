@@ -1,0 +1,201 @@
+body {
+    color: #575757;
+}
+article {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+    padding: 0.5em 1.2em;
+    border-radius:10px;     /*ボックスの角丸指定*/
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    box-shadow: inset 1px 1px 0 rgba(255,255,255,1);
+    background: #FDE08D;
+  	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+}
+
+/********** ボーダーライン**********/
+.brd {
+  	background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
+    padding:5px 0 0;
+}
+
+/********** テキストエリア **********/
+.box1 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    background: white;
+    border-top: solid 5px #DAA520;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.box1 p {
+    margin: 0;
+    padding: 0;
+    font-family: 'MS 明朝', 'Hiragino Mincho Pro';
+}
+
+.form_area {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/********** チェックボックス **********/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+    margin-top: 10px;
+  margin-bottom: 2px;
+  font: 14px/20px 'Open Sans', Arial, sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #DAA520;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/********** テキストエリア **********/
+input[type="text"] {
+    width: 265px;
+    margin-left: 35px;
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    font: 14px/20px 'Open Sans', Arial, sans-serif;
+}
+
+/********** ボタン **********/
+.bottom-btn-area {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.btm-btn {
+    display: inline-block; /*要素の表示設定*/
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 180px;
+    height:40px;
+    text-align: center;
+    background: #FDE08D;
+  	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+    font-size: 16px;
+    border-radius:25px;     /*ボックスの角丸指定*/
+    line-height: 42px;      /*余白設定*/
+    color: #575757;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #DDA520;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-next:after{
+    width: 300px;
+    height: 300px;
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background : #FFF;
+    opacity: 1;
+    transform: translateX(-105%) /*X方向の移動距離*/
+               translateY(-50%) /*Y方向の移動距離*/
+               rotate(45deg); /*45度回転*/
+    transition: .2s;
+    z-index: -1;
+}
+
+.btm-btn:hover{
+    color: #DDA520;
+}
+
+.btn-next:hover:after{
+    transform: translateX(-70%)
+               translateY(-50%)
+               rotate(45deg);
+    opacity: 1; /*opacity:透明度の指定*/
+}
+
+.btn-next:active:after{
+    transform: translateX(-35%)
+               translateY(-50%)
+               rotate(45deg);
+    opacity: 1; /*opacity:透明度の指定*/
+}
+
+.btn-back:after {
+    width: 300px;
+    height: 300px;
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background : #FFF;
+    opacity: 1;
+    transform: translateX(65%) /*X方向の移動距離*/
+               translateY(-50%) /*Y方向の移動距離*/
+               rotate(45deg); /*45度回転*/
+    transition: .2s;
+    z-index: -1;
+}
+
+.btn-back:hover:after{
+    transform: translateX(30%)
+               translateY(-50%)
+               rotate(45deg);
+    opacity: 1; /*opacity:透明度の指定*/
+}
+
+.btn-back:active:after{
+    transform: translate(-5%)
+               translateY(-50%)
+               rotate(45deg);
+    opacity: 1; /*opacity:透明度の指定*/
