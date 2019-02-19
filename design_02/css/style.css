@@ -1,0 +1,32 @@
+.bk-1 {
+    background: #CCC;
+}
+
+.bk-2 {
+    background: #999;
+}
+
+.bk-3 {
+    background: #333;
+}
+
+.bk-4 {
+    background: #121212;
+}
+
+.bk-5 {
+    background: #12AA12;
+}
+
+.bk-6 {
+    background: #12AAAA;
+}
+
+
+body {
+    background: #EEE;
+}
+
+.section {
+    padding: 14rem 0 15rem;
+}
